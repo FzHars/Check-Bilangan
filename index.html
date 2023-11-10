@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="input.css">
+    <title>Input Bilangan Bulat</title>
+</head>
+<body>
+    <h2>Cek Bilangan</h2>
+
+    <label for="inputbilangan">Masukkan Bilangan Bulat:</label>
+    <input type="bilangan" id="inputbilangan">
+    <button onclick="cekbilangan()">Cek</button>
+
+    <p id="hasil"></p>
+
+    <script>
+        function cekbilangan() {
+            var inputbilangan = document.getElementById("inputbilangan").value;
+            var bilangan = parseInt(inputbilangan);
+            var hasil = (bilangan % 2 === 0) ? "Genap" : "Ganjil";
+
+            document.getElementById("hasil").innerHTML = "Bilangan ini adalah "+hasil+".";
+        }
+    </script>
+</body>
+</html>
